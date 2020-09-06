@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+.Container {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Form {
+    margin-top: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Nav {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+    min-height: 10vh;
+    background: #282c34;
+    color: white;
+
+    padding: 5px; /* this */
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Nav div {
+    margin: 5px; /* and that, will result in a 10px gap */
+
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Nav-Links {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.3em;
 }
+
+.alert-hidden {
+    visibility: hidden;
+    position: relative;
+}
+
+
+.alert-show {
+    position: relative;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
+}
+
+/*.alert-show {*/
+/*    opacity: 1;*/
+/*    animation: 3s show both;*/
+/*}*/
+
+/*@keyframes show {*/
+/*    100% {*/
+/*        opacity: 0*/
+/*    }*/
+/*}*/

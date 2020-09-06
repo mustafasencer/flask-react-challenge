@@ -1,4 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## API Documentation
+
+Each endpoint manipulates or displays Applications:
+
+* [Get Brokers](api/docs/get.md) : `GET /api/v1/broker`
+* [Get Broker](api/docs/get_by_id.md) : `GET /api/v1/broker/:id`
+* [Post Broker](api/docs/post.md) : `POST /api/v1/broker`
+* [Put Broker](api/docs/put.md) : `PUT /api/v1/broker/:id`
+* [Delete Broker](api/docs/delete.md) : `DELETE /api/v1/broker/:id`
 
 ## Available Scripts
 
