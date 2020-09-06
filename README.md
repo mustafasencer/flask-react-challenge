@@ -3,11 +3,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Each endpoint manipulates or displays Brokers:
 
-* [Get Brokers](api/docs/get.md) : `GET /api/v1/broker`
-* [Get Broker](api/docs/get_by_id.md) : `GET /api/v1/broker/:id`
-* [Post Broker](api/docs/post.md) : `POST /api/v1/broker`
-* [Put Broker](api/docs/put.md) : `PUT /api/v1/broker/:id`
-* [Delete Broker](api/docs/delete.md) : `DELETE /api/v1/broker/:id`
+* [Get Brokers](public/docs/get.md) : `GET /api/v1/broker`
+* [Get Broker](public/docs/get_by_id.md) : `GET /api/v1/broker/:id`
+* [Post Broker](public/docs/post.md) : `POST /api/v1/broker`
+* [Put Broker](public/docs/put.md) : `PUT /api/v1/broker/:id`
+* [Delete Broker](public/docs/delete.md) : `DELETE /api/v1/broker/:id`
 
 ### Mock Data
 
