@@ -31,7 +31,7 @@ Post a Broker.
 
 ## Error Responses
 
-**Condition** : If [Here API](https://www.here.com/) is not responding or have an issue.
+**Condition** : If [Here API](https://www.here.com/) is not responding or has an issue.
 
 **Code** : `400 BAD REQUEST`
 
