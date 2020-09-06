@@ -1,3 +1,5 @@
+from os import environ
+
 from flask import Flask
 
 from api.application import db
@@ -8,7 +10,8 @@ from api.models.broker import Broker
 
 def run():
     app = Flask(__name__)
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///../db.sqlite3'
+    app.config['SQLALCHEMY_DATABASE_URI'] = environ.get('SQLALCHEMY_DATABASE_URI',
+                                                        'sqlite:///../db.sqlite3?check_same_thread=False')
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     db.init_app(app)
 

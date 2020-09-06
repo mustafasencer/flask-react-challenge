@@ -26,6 +26,16 @@ def _init_error_handler(app):
         )
         return jsonify(error.__dict__), error.status
 
+    @app.errorhandler(429)
+    def handle_exception(e):
+        error = AppError(
+            status=429,
+            err_code='errors.tooManyRequests',
+            err_msg=f'{e.name}',
+            reason=f'{traceback.format_exc()[:1000]}'
+        )
+        return jsonify(error.__dict__), error.status
+
     @app.errorhandler(Exception)
     def handle_exception(e):
         error = AppError(

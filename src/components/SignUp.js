@@ -10,6 +10,9 @@ function SignUp() {
     const [isError, setIsError] = useState(false);
     const [isLoading, setLoading] = useState(false);
     const [emailError, setEmailError] = useState(false);
+    const [firstnameError, setfirstnameError] = useState(false);
+    const [lastnameError, setlastnameError] = useState(false);
+    const [addressError, setaddressError] = useState(false);
 
     useEffect(() => {
         if (alertShow) {
@@ -28,6 +31,27 @@ function SignUp() {
         const body = {values};
         setLoading(true);
 
+        if (body.values.firstname === '') {
+            setfirstnameError(true);
+            setLoading(false);
+            return
+        } else {
+            setfirstnameError(false);
+        }
+        if (body.values.lastname === '') {
+            setlastnameError(true);
+            setLoading(false);
+            return
+        } else {
+            setlastnameError(false);
+        }
+        if (body.values.address === '') {
+            setaddressError(true);
+            setLoading(false);
+            return
+        } else {
+            setaddressError(false);
+        }
         if (body.values.email === '') {
             setEmailError(true);
             setLoading(false);
@@ -76,6 +100,7 @@ function SignUp() {
                     name="firstname"
                     value={values.firstname}
                     onChange={handleChange}
+                    error={firstnameError}
                 />
                 <Form.Input
                     control={Input}
@@ -84,6 +109,7 @@ function SignUp() {
                     name="lastname"
                     value={values.lastname}
                     onChange={handleChange}
+                    error={lastnameError}
 
                 />
             </Form.Group>
@@ -94,6 +120,7 @@ function SignUp() {
                 name="address"
                 value={values.address}
                 onChange={handleChange}
+                error={addressError}
             />
             <Form.Input
                 control={Input}
@@ -106,7 +133,7 @@ function SignUp() {
                 error={emailError}
             />
             <Form.Button content='Submit'/>
-            <Transition visible={alertShow} animation='scale' duration={3000}>
+            <Transition visible={alertShow}  duration={3000}>
                 {!isError ? (<Message positive>
                     <Message.Header>Success!</Message.Header>
                     <p>{alertMessage}</p>
