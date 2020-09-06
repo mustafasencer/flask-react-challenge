@@ -9,9 +9,13 @@ Each endpoint manipulates or displays Brokers:
 * [Put Broker](public/docs/put.md) : `PUT /api/v1/broker/:id`
 * [Delete Broker](public/docs/delete.md) : `DELETE /api/v1/broker/:id`
 
-### Mock Data
+#### Mock Data
 
 Mock data is available in [init_mock_db](api/tests/init_mock_db.py) file.
+
+#### Env Variables
+
+`SQLALCHEMY_DATABASE_URI` and `HERE_API_KEY` should be provided. (Nevertheless, default values will be in place.)
 
 ## Available Scripts
 
