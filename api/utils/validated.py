@@ -3,7 +3,7 @@ from functools import wraps
 from flask import request
 from jsonschema import ValidationError, validate
 
-from api.utils.errors import AppError
+from api.utils.error import AppError
 
 
 def validated(schema):

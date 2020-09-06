@@ -2,7 +2,7 @@
 
 Post a Broker.
 
-**URL** : `/api/v1/broker/:id`
+**URL** : `/api/v1/broker`
 
 **Method** : `POST`
 
@@ -31,16 +31,16 @@ Post a Broker.
 
 ## Error Responses
 
-**Condition** : If `id` does not exist in DB.
+**Condition** : If [Here API](https://www.here.com/) is not responding or have an issue.
 
-**Code** : `404 NOT FOUND`
+**Code** : `400 BAD REQUEST`
 
 **Content** : 
 
 ```json
 {
-    "err_msg": "Broker was not found by given id: <application_id>",
-    "err_code": "errors.brokerNotFound",
+    "err_msg": "Here API response body",
+    "err_code": "errors.hereApiError",
     "context": null,
     "reason": null
 }

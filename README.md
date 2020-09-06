@@ -1,13 +1,17 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## API Documentation
 
-Each endpoint manipulates or displays Applications:
+Each endpoint manipulates or displays Brokers:
 
 * [Get Brokers](api/docs/get.md) : `GET /api/v1/broker`
 * [Get Broker](api/docs/get_by_id.md) : `GET /api/v1/broker/:id`
 * [Post Broker](api/docs/post.md) : `POST /api/v1/broker`
 * [Put Broker](api/docs/put.md) : `PUT /api/v1/broker/:id`
 * [Delete Broker](api/docs/delete.md) : `DELETE /api/v1/broker/:id`
+
+### Mock Data
+
+Mock data is available in [init_mock_db](api/tests/init_mock_db.py) file.
 
 ## Available Scripts
 
@@ -20,6 +24,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
+
+### `yarn start-api`
+
+Runs the api in the development mode.<br />
+Api available on [http://localhost:5000](http://localhost:5000).
 
 ### `yarn test`
 

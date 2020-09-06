@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import '../App.css';
-import {Button, List, Message} from "semantic-ui-react";
+import {List, Message} from "semantic-ui-react";
 
 
 function Brokers() {
@@ -24,6 +24,7 @@ function Brokers() {
             {brokers.map(broker => {
                 return (
                     <List.Item key={broker.id}>
+                        <List.Icon name='id badge outline'/>
                         <List.Content>
                             <List.Header as='a'>{broker.email}</List.Header>
                             <List.Description>

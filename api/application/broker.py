@@ -6,7 +6,7 @@ from api.models.agency_domain_whitelist import AgencyDomainWhitelist
 from api.models.broker import Broker
 from api.schemas.broker import CREATE, UPDATE
 from api.services.geocode_service import get_nearest_agency
-from api.utils.errors import AppError
+from api.utils.error import AppError
 from api.utils.validated import validated
 
 bp = Blueprint('broker', __name__)
@@ -49,13 +49,13 @@ def get():
     return jsonify([broker.as_dict() for broker in brokers]), 200
 
 
-@bp.route('/api/v1/broker/<uuid:broker_id>', methods=['GET'])
+@bp.route('/api/v1/broker/<int:broker_id>', methods=['GET'])
 def get_by_id(broker_id):
     broker = Broker.query.get_or_404(broker_id, description=f"Broker Not Found by given ID: {broker_id}")
     return jsonify(broker.as_dict()), 200
 
 
-@bp.route('/api/v1/broker/<uuid:broker_id>', methods=['PUT'])
+@bp.route('/api/v1/broker/<int:broker_id>', methods=['PUT'])
 @validated(UPDATE)
 def update(broker_id):
     data = request.json
@@ -66,7 +66,7 @@ def update(broker_id):
     return jsonify(broker.as_dict()), 200
 
 
-@bp.route('/api/v1/broker/<uuid:broker_id>', methods=['DELETE'])
+@bp.route('/api/v1/broker/<int:broker_id>', methods=['DELETE'])
 def delete(broker_id):
     broker = Broker.query.get_or_404(broker_id, description=f"Broker Not Found by given ID: {broker_id}")
     db.session.delete(broker)

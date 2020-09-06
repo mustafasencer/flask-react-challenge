@@ -9,7 +9,7 @@ from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from flask_sqlalchemy import SQLAlchemy
 
-from api.utils.errors import AppError
+from api.utils.error import AppError
 
 
 def _init_error_handler(app):

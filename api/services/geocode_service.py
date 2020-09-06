@@ -4,7 +4,7 @@ import urllib
 from flask import current_app
 from requests import HTTPError
 
-from api.utils.errors import AppError
+from api.utils.error import AppError
 
 service_url = "https://geocode.search.hereapi.com/v1/geocode"
 

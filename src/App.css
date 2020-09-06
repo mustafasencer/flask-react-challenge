@@ -16,47 +16,28 @@
     min-height: 10vh;
     background: #282c34;
     color: white;
-
-    padding: 5px; /* this */
+    padding: 5px;
 
 }
 
 .Nav div {
-    margin: 5px; /* and that, will result in a 10px gap */
-
-}
-
-.App-link {
-    color: #61dafb;
+    margin: 10px;
 }
 
 .Nav-Links {
     display: flex;
     justify-content: space-evenly;
     font-size: 1.3em;
+    padding: 5px;
+}
+
+.Nav-Links > * {
+    margin: 10px;
+    color: #61dafb;
+
 }
 
 .alert-hidden {
     visibility: hidden;
     position: relative;
 }
-
-
-.alert-show {
-    position: relative;
-    opacity: 0;
-    width: 0;
-    height: 0;
-    transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
-}
-
-/*.alert-show {*/
-/*    opacity: 1;*/
-/*    animation: 3s show both;*/
-/*}*/
-
-/*@keyframes show {*/
-/*    100% {*/
-/*        opacity: 0*/
-/*    }*/
-/*}*/

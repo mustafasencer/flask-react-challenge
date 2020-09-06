@@ -9,6 +9,7 @@ function SignUp() {
     const [alertMessage, setAlertMessage] = useState("");
     const [isError, setIsError] = useState(false);
     const [isLoading, setLoading] = useState(false);
+    const [emailError, setEmailError] = useState(false);
 
     useEffect(() => {
         if (alertShow) {
@@ -21,12 +22,19 @@ function SignUp() {
 
     const handleChange = (e, {name, value}) => {
         setValues({...values, [name]: value});
-
     };
 
     const handleSubmit = () => {
         const body = {values};
         setLoading(true);
+
+        if (body.values.email === '') {
+            setEmailError(true);
+            setLoading(false);
+            return
+        } else {
+            setEmailError(false);
+        }
 
         fetch('/api/v1/broker', {
             method: "POST",
@@ -52,7 +60,7 @@ function SignUp() {
                 setValues({firstname: "", lastname: "", email: "", address: ""})
             })
             .catch((error) => {
-                setAlertShow(true)
+                setAlertShow(true);
                 setLoading(false);
             });
     };
@@ -76,6 +84,7 @@ function SignUp() {
                     name="lastname"
                     value={values.lastname}
                     onChange={handleChange}
+
                 />
             </Form.Group>
             <Form.Input
@@ -93,6 +102,8 @@ function SignUp() {
                 name="email"
                 value={values.email}
                 onChange={handleChange}
+                fluid
+                error={emailError}
             />
             <Form.Button content='Submit'/>
             <Transition visible={alertShow} animation='scale' duration={3000}>

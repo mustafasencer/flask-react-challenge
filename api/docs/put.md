@@ -4,7 +4,7 @@ Update a Broker.
 
 **URL** : `/api/v1/broker/:id`
 
-**Method** : `GET`
+**Method** : `PUT`
 
 **Headers** : 
 ```json
