@@ -11,7 +11,7 @@ Each endpoint manipulates or displays Brokers:
 
 #### Mock Data
 
-Mock data is available in [init_mock_db](api/tests/init_mock_db.py) file.
+Mock data is available in [init_mock_db](api/tests/init_mock_db.py) file. (Resets the db and adds mock data)
 
 #### Env Variables
 
@@ -31,7 +31,7 @@ You will also see any lint errors in the console.
 
 ### `yarn start-api`
 
-Runs the api in the development mode. Please check the location of your virtual env before launching<br />
+Runs the api in the development mode. Please check the location of your virtual env before launching.<br />
 Api available on [http://localhost:5000](http://localhost:5000).
 
 ### `yarn test`
