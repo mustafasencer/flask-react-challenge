@@ -18,7 +18,7 @@ function SignUp() {
         if (alertShow) {
             const timer = setTimeout(() => {
                 setAlertShow(false);
-            }, 1000);
+            }, 500);
             return () => clearTimeout(timer);
         }
     }, [alertShow, alertMessage]);
@@ -133,7 +133,7 @@ function SignUp() {
                 error={emailError}
             />
             <Form.Button content='Submit'/>
-            <Transition visible={alertShow}  duration={3000}>
+            <Transition visible={alertShow}  duration={2500}>
                 {!isError ? (<Message positive>
                     <Message.Header>Success!</Message.Header>
                     <p>{alertMessage}</p>
