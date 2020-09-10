@@ -62,7 +62,7 @@ class CustomJSONEncoder(JSONEncoder):
         return JSONEncoder.default(self, obj)
 
 
-limiter = Limiter(key_func=get_remote_address, default_limits=["50 per minute"])
+limiter = Limiter(key_func=get_remote_address(), default_limits=["50 per minute"])
 db = SQLAlchemy()
 
 
