@@ -2,7 +2,7 @@
 
 Get all Brokers.
 
-**URL** : `/api/v1/broker/:id`
+**URL** : `/api/v1/broker`
 
 **Method** : `GET`
 
